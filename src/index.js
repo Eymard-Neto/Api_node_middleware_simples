@@ -2,8 +2,10 @@ const { response } = require('express');
 
 const express = require('express'),
 app = express(),
+cors = require('cors'),
 {uuid, isUuid} = require('uuidv4'); // universal unique id
 
+app.use(cors());
 app.use(express.json()); // Precisa desse use para receber entradas json
 
 /**
